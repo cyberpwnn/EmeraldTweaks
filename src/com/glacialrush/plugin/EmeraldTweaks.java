@@ -27,6 +27,11 @@ public class EmeraldTweaks extends JavaPlugin implements Listener
 		{
 			for(ItemStack i : e.getInventory().getMatrix())
 			{
+				if(i == null)
+				{
+					continue;
+				}
+				
 				if(i.hasItemMeta())
 				{
 					if(ChatColor.stripColor(i.getItemMeta().getDisplayName()).equals("Effect Gem"))
